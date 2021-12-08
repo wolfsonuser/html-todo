@@ -3,7 +3,7 @@ let myNodelist = document.getElementsByTagName("LI");
 
 for (let i = 0; i < myNodelist.length; i++) {
     let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
+    let txt = document.createTextNode("X");
     span.className = "close";
     span.appendChild(txt);
     myNodelist[i].appendChild(span);
@@ -40,7 +40,7 @@ function newElement() {
     document.getElementById("myInput").value = "";
 
     let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
+    let txt = document.createTextNode("X");
     span.className = "close";
     span.appendChild(txt);
     li.appendChild(span);
@@ -54,4 +54,4 @@ function newElement() {
 }
 
 // link: https://www.w3schools.com/howto/howto_js_todolist.asp
-// version original
+// version Flex
