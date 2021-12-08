@@ -1,3 +1,8 @@
+/* style changed to match react todo version style */
+/* main {
+    width:60%;
+    margin: auto;
+} */
 /* Include the padding and border in an element's total width and height */
 * {
     box-sizing: border-box;
@@ -17,6 +22,7 @@
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    text-decoration: none;
   
     /* make the list items unselectable */
     -webkit-user-select: none;
