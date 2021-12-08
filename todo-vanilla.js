@@ -3,7 +3,7 @@ let todo = ['Buy a turtle'];
 function start() {
     let input = prompt(("What would you like to do? 'new' - 'list' - 'quit' - 'delete'").toUpperCase());
 
-    while (input !== 'quit') {
+    while (input !== 'quit' || null) {
         if (input === 'list') {
             list();
         } else if (input === 'new') {
@@ -12,6 +12,7 @@ function start() {
             deleteItem();
         } else {
             console.log("something went wrong!!!!")
+           break;
         }
 
         // ask again for new input
