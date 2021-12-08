@@ -1,21 +1,37 @@
-const todo = ['Buy a turtle'];
+let todo = ['Buy a turtle'];
 
 function start() {
-    let input = prompt(("What would you like to do? 'new' - 'list' - 'quit'").toUpperCase());
+    let input = prompt(("What would you like to do? 'new' - 'list' - 'quit' - 'delete'").toUpperCase());
 
     while (input !== 'quit') {
         if (input === 'list') {
-            console.log(todo);
+            list();
         } else if (input === 'new') {
-            let newTodo = prompt('Enter new TODO');
-            // add to todo array
-            todo.push(newTodo);
+            add();
+        } else if (input === 'delete') {
+            deleteItem();
+        } else {
+            console.log("something went wrong!!!!")
         }
+
         // ask again for new input
-        input = prompt(("What would you like to do?").toUpperCase());
+        input = prompt(("What would you like to do? 'new' - 'list' - 'quit' - 'delete'").toUpperCase());
     }
     console.log(todo);
-    //buildHtmlString();
+    buildHtmlString();
+}
+function list(){
+    console.log(todo);
+}
+function add(){
+    let input = prompt("Enter new todo");
+    todo.push(input);
+    console.log('Adding....added ' + input)
+}
+function deleteItem(){
+    let index = prompt("Enter index of todo to be delete: ");
+    todo.splice(index, 1);
+    console.log("deleting todo at index: " + index);
 }
 function buildHtmlString() {
     let result = "";

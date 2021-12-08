@@ -11,4 +11,7 @@
 1. ::before changed to char '<' instead of lines
 1. color of header changed to green
 1. Added todo-jquery dot js, based on example by Colt Steele
+1. Added todo-vanilla dot js, based also on example by Colt Steele
+1. Refactored todo-vanilla into separated functions including "delete"
+1. pending: todo with express (ejm) and todo with react and express
 
