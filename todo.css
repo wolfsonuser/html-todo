@@ -1,7 +1,15 @@
 /* style changed to match react todo version style */
+body {
+  font-family: Roboto;
+}
 main {
     width:98%;
     margin: auto;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: normal;
 }
 
   /* Remove margins and padding from the list */
@@ -13,6 +21,7 @@ main {
   
   /* Style the list items */
   ul li {
+
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
@@ -21,7 +30,7 @@ main {
     transition: 0.2s;
     user-select: none;
   }
-  
+ 
   /* Set all odd list items to a different color (zebra-stripes) */
   ul li:nth-child(odd) {
     background: #f9f9f9;
@@ -49,19 +58,25 @@ main {
     top: 10px;
     left: 16px;
     transform: rotate(-35deg);
+    font-size: xx-large;
+    font-weight: bolder;
   }
-  
+
   /* Style the close button */
-  .close {
+  /* .close { */
+  .fa-trash {
     position: absolute;
     right: 0;
     top: 0;
     padding: 12px 16px 12px 16px;
+    color: black;
+    background-color: #e74c3c;
   }
   
-  .close:hover {
+  .fa-trash:hover {
     background-color: #f44336;
     color: white;
+    opacity: 1.0;
   }
   
   /* Style the header */
@@ -87,6 +102,11 @@ main {
     font-size: 16px;
   }
   
+  input:focus{
+    background-color: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+  }
   /* Style the "Add" button */
   .addBtn {
     padding: 10px;
