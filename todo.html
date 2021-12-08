@@ -5,14 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="todo.css">
-    <title>TODO JQuery</title>
+    <title>TODO Vanilla</title>
 </head>
 
 <body>
@@ -20,19 +14,21 @@
         <header id="myDIV" class="header">
             <h2>My To Do List</h2>
             <section>
-                <input type="text" id="myInput" placeholder="Add New Todo...">
-                <span><i class='fa fa-plus'></i></span>
-                <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+                <input type="text" id="myInput" placeholder="This is vanilla JavaScript, click start...">
+                
+                <span onclick="start()" class="addBtn">Start</span>
             </section>
         </header>
-
         <ul id="myUL">
-            <li>Go To Potions Class<span><i class='fa fa-trash'></i></span></li>
-            <li>Buy New Robes<span><i class='fa fa-trash'></i></span></li>
-            <li>Visit Hagrid<span><i class='fa fa-trash'></i></span></li>
+            <li>"new" - Add a todo</li>
+            <li>"list" - List all todo items</li>
+            <li>"quit" - Quit the App</li>
         </ul>
+        
+        <h2>Results</h2>
+        <section id='resultHtml'></section>
 
-        <script src="todo-jquery.js"></script>
+        <script src="todo-vanilla.js"></script>
     </main>
 </body>
 
