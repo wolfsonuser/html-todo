@@ -13,5 +13,8 @@
 1. Added todo-jquery dot js, based on example by Colt Steele
 1. Added todo-vanilla dot js, based also on example by Colt Steele
 1. Refactored todo-vanilla into separated functions including "delete"
+   1. when quiting, it list todos in the html page
+   1. when list : it works only on debugging mode, otherwise it doesn't
+   1. pending find the reason or the bug or the fix
 1. pending: todo with express (ejm) and todo with react and express
 

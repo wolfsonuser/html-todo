@@ -1,18 +1,22 @@
 let todo = ['Buy a turtle'];
+let result = "";
 
 function start() {
     let input = prompt(("What would you like to do? 'new' - 'list' - 'quit' - 'delete'").toUpperCase());
 
     while (input !== 'quit' ) {
         if (input === 'list') {
-            list();
+            list(todo);
+           
         } else if (input === 'new') {
             add();
         } else if (input === 'delete') {
             deleteItem();
         } else {
             console.log("something went wrong!!!!")
-           break;
+            // input = 'quit'; these two lines equivalent to break;
+            // continue;
+            break; // NO NO NO NO NO NO continue;
         }
 
         // ask again for new input
@@ -21,7 +25,8 @@ function start() {
     console.log(todo);
     buildHtmlString();
 }
-function list(){
+function list(todo){
+   buildHtmlString(todo);
     console.log(todo);
 }
 function add(){
@@ -35,7 +40,7 @@ function deleteItem(){
     console.log("deleting todo at index: " + index);
 }
 function buildHtmlString() {
-    let result = "";
+    result = "";
     result += "<ul>"
     todo.forEach(function (item, i) {
         result += `<li>${i} - ${item}</li>`
