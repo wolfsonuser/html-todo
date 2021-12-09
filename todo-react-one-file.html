@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="IGNORE/css/styles.css" />
+        <title>Todo App</title>
+    </head>
+
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="IGNORE/js/react-bootstrap.js"></script>
+    <script src="IGNORE/js/babel.min.js"></script>
+    <!-- <script type="text/babel" src="js/app.js"></script> -->
+    <script type="text/babel" src="IGNORE/external-app.js"></script>
+    <script type="text/babel">
+        function App() {
+            const { Container, Row, Col } = ReactBootstrap;
+            return (
+                <Container>
+                    <Row>
+                        <Col md={{ offset: 3, span: 6 }}>
+                            <TodoListCard />
+                        </Col>
+                    </Row>
+                </Container>
+            );
+        }
+        function TodoListCard() {
+            return (
+                <h1>Hello World from App()</h1>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+
+</body>
+
+</html>
