@@ -37,26 +37,71 @@
             );
         }
         function onStart(){ return prompt("start")};
-        function handleChange(e) { console.log(e.target.value); if (e.target.value === 'add') return prompt("handle change")};
+        function handleChange(e) { 
+            console.log(e.target.value); 
+            if (e.target.value === 'add') return prompt("handle change")
+        };
         function MainHeader() {
+            let newTodo = "";
             return (
               <header>
                     <h2>My To Do List</h2>
                     <section >
-                        <input type="text" onChange={handleChange}size={12} />
-                        <button  onClick={onStart}>Start Adding Todos</button>
+                        <input type="text" name='newTodo' 
+                        placeholder='what needs to be done.....' onChange={handleChange}size={12} />
+                        <button type='submit' onSubmit={onStart}>Start Adding Todos</button>
                     </section>
                 </header>
             );
         };
         function TodoList() {
-            let items = ['Buy a turtle', 'go to sleep'];
+             let hardIitems = ['Buy a turtle', 'go to sleep', 'run'];
+            // const [items, setItems] = React.useState(null);
+
+            // React.useEffect( () => {
+            //     setItems(hardItems);
+            // }, []);
+
+            // const onNewItem = React.useCallback(
+            //     newItem => {
+            //         setItems([...items, newItem]);
+            //     }, [items],
+            // );
+
 
             return (
-                items.map((item, i) => (
+                <div>
+               
+                {hardIitems.map((item, i) => (
                     <li key={`todo-${i}`}>{i} - {item}</li>
-                ))
+                ))}
+                </div>
             );
+        }
+        function AddItemForm({onNewItem}){
+            const [newItem, setNewItem] = React.useState('');
+            const [submitting, setSubmitting] = React.useState(false);
+
+            const submitNewItem = e => {
+                e.preventDefault();
+                setSubmitting(true);
+                let item = e.target.name;
+                item => {
+                    onNewItem(item);
+                    setSubmitting(false);
+                    setNewItem('');
+                } 
+            }
+            return (
+                <form onSubmit={submitNewItem}
+                    value={newItem}
+                    onChange={e => setNewItem(e.target.value)}
+                    type='text'
+                    placeholder="New Item">
+                    <button type="submit" >submitting  adding</button>
+
+                </form>
+            )
         }
         ReactDOM.render(<App />, document.getElementById('root'));
 
